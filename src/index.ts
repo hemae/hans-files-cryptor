@@ -13,8 +13,8 @@ class FileCrypt {
             throw e
         }
     }
-    encryptObjectAndWriteTextFile(obj: Object, filePath: string, key: string, objectName?: string): void {
-        writeFileSync(filePath, crypt.encrypt(JSON.stringify({[`${objectName || 'items'}`]: obj}), key), 'utf8')
+    encryptObjectAndWriteTextFile(obj: Object, filePath: string, key: string): void {
+        writeFileSync(filePath, crypt.encrypt(JSON.stringify(obj), key), 'utf8')
     }
 }
 
