@@ -2,18 +2,13 @@ import {readFileSync, writeFileSync} from 'fs'
 import crypt from 'hans-cryptor'
 
 
-export type CryptDocumentType<ItemType> = {
-    items: ItemType[]
-}
-
 class FileCrypt {
-    decryptTextFileAndParse<ItemType>(filePath: string, key: string): ItemType[] {
+    decryptTextFileAndParse<ObjectType>(filePath: string, key: string): ObjectType {
         try {
-            const object = JSON.parse(
+            return JSON.parse(
                 crypt.decrypt(
                     readFileSync(filePath, 'utf8'), key
-                )) as CryptDocumentType<ItemType>
-            return object.items
+                )) as ObjectType
         } catch (e) {
             throw e
         }
