@@ -1,0 +1,24 @@
+{
+  "name": "hans-files-cryptor",
+  "version": "1.0.0",
+  "description": "file cryptor with hans-cryptor",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": "https://github.com/hemae/hans-files-cryptor.git",
+  "keywords": [
+    "crypt",
+    "encrypt",
+    "decrypt",
+    "file"
+  ],
+  "author": "Hans Andersen <hemae2468@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "hans-cryptor": "^1.0.1"
+  }
+}
